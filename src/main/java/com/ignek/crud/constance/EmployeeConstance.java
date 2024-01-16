@@ -35,4 +35,15 @@ public class EmployeeConstance {
 	public static final String SELECT_BY_ID = "select * FROM student_details where id=?";
 	
 	public static final String SELECT_ALL_QUERY = "select * from student_details";
+	
+	public static final String EDIT_ID = "editId";
+	
+	public static final String DELETE_ID = "deleteId";
+	
+	public static final String EMPLOYEE = "employee";
+	
+	public static final int DEFAULT_INTEGER = 0;
+	
+	public static final String LIST = "list";
+
 }

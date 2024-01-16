@@ -5,7 +5,10 @@ public class Employee{
 	private int id;
 	private String firstName;
 	private String lastName;
-	private String email, contact, gender, course;
+	private String email;
+	private String contact; 
+	private String gender;
+	private String course;
 
 	public int getId() {
 		return id;
@@ -60,6 +63,18 @@ public class Employee{
 	}
 
 	public void setCourse(String course) {
+		this.course = course;
+	}
+	
+	public Employee(int id, String firstName, String lastName, String email, String contact, String gender,
+			String course) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.contact = contact;
+		this.gender = gender;
 		this.course = course;
 	}
 

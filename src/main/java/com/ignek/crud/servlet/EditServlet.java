@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.ignek.crud.constance.EmployeeConstance;
 import com.ignek.crud.dao.EmployeeDao;
 import com.ignek.crud.dto.Employee;
 
@@ -21,12 +23,12 @@ public class EditServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		String editId = request.getParameter("editId");
-		String deleteId = request.getParameter("deleteId");
+		String editId = request.getParameter(EmployeeConstance.EDIT_ID);
+		String deleteId = request.getParameter(EmployeeConstance.DELETE_ID);
 
 		if (editId != null) {
 			Employee employee = EmployeeDao.getEmpById(Integer.parseInt(editId));
-			request.setAttribute("employee", employee);
+			request.setAttribute(EmployeeConstance.EMPLOYEE, employee);
 			request.getRequestDispatcher("Index.jsp").forward(request, response);
 		}
 		
