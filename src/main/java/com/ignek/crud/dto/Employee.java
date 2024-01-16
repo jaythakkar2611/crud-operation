@@ -65,10 +65,14 @@ public class Employee {
 	public void setCourse(String course) {
 		this.course = course;
 	}
+	
+	public static Employee create() {
+		return new Employee();
+	}
 
-	public Employee(int id, String firstName, String lastName, String email, String contact, String gender,
+	public Employee withParamaters(int id, String firstName, String lastName, String email, String contact, String gender,
 			String course) {
-		super();
+		
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -76,10 +80,11 @@ public class Employee {
 		this.contact = contact;
 		this.gender = gender;
 		this.course = course;
+		return this;
 	}
 
 	public Employee() {
-		super();
+		
 	}
 
 }

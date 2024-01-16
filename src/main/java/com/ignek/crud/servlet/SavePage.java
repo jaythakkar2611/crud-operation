@@ -33,7 +33,7 @@ public class SavePage extends HttpServlet {
 		String gender = request.getParameter(EmployeeConstance.GENDER);
 		String course = request.getParameter(EmployeeConstance.COURSE);
 
-		Employee employee = new Employee(empId, firstName, lastName, email, contact, gender, course);
+		Employee employee =  Employee.create().withParamaters(empId, firstName, lastName, email, contact, gender, course);
 
 		if (empId != EmployeeConstance.DEFAULT_INTEGER) {
 			status = EmployeeService.update(employee);
