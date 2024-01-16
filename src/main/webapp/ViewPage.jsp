@@ -8,7 +8,7 @@
 <body>
 	<a href='Index.jsp'>Add New Employee</a>
 	<h1>Employee List</h1>
-	<table  border='1' style="width: 100%;">
+	<table border='1' style="width: 100%;">
 		<tr>
 			<th>Id</th>
 			<th>FirstName</th>
@@ -20,7 +20,7 @@
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
-		
+
 		<c:forEach var="employee" items="${list}">
 			<tr>
 				<td>${employee.id}</td>

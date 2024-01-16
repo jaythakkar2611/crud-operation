@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ignek.crud.constance.EmployeeConstance;
-import com.ignek.crud.dao.EmployeeDao;
+import com.ignek.crud.dao.EmployeeService;
 import com.ignek.crud.dto.Employee;
 
 /**
@@ -27,14 +27,13 @@ public class EditServlet extends HttpServlet {
 		String deleteId = request.getParameter(EmployeeConstance.DELETE_ID);
 
 		if (editId != null) {
-			Employee employee = EmployeeDao.getEmpById(Integer.parseInt(editId));
+			Employee employee = EmployeeService.getEmpById(Integer.parseInt(editId));
 			request.setAttribute(EmployeeConstance.EMPLOYEE, employee);
 			request.getRequestDispatcher("Index.jsp").forward(request, response);
 		}
-		
-		if(deleteId != null)
-		{
-			EmployeeDao.delete(Integer.parseInt(deleteId));
+
+		if (deleteId != null) {
+			EmployeeService.delete(Integer.parseInt(deleteId));
 			response.sendRedirect("ViewServlet");
 		}
 

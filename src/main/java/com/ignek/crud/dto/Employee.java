@@ -1,12 +1,12 @@
 package com.ignek.crud.dto;
 
-public class Employee{
+public class Employee {
 
 	private int id;
 	private String firstName;
 	private String lastName;
 	private String email;
-	private String contact; 
+	private String contact;
 	private String gender;
 	private String course;
 
@@ -65,7 +65,7 @@ public class Employee{
 	public void setCourse(String course) {
 		this.course = course;
 	}
-	
+
 	public Employee(int id, String firstName, String lastName, String email, String contact, String gender,
 			String course) {
 		super();
@@ -76,6 +76,10 @@ public class Employee{
 		this.contact = contact;
 		this.gender = gender;
 		this.course = course;
+	}
+
+	public Employee() {
+		super();
 	}
 
 }
